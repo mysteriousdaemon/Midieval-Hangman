@@ -1,11 +1,3 @@
-/*
-.sticky:before, .sticky:after {
-    display: table;
-    line-height: 0;
-    content: "";
-}
-*/
-
 * {
 	font-family: 'UnifrakturCook', 'Helvetica', sans-serif;
 }
