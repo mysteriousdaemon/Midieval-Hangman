@@ -6,7 +6,6 @@
 			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
 			<link rel="stylesheet" type="text/css" href="styles/normalize.css">
 			<link rel="stylesheet" type="text/css" href="styles/index.css">
-
 		</head>
 		<body>
 			<header>
@@ -19,34 +18,35 @@
 				</div>
 			<header>
 
-
 			<div class="container">
 			  <div class="row my-4">
-			    <div class="col">
-			    	<h2>[VISUALS]</h2>
+			    <div class="col-md-6">
+			    	<h2 id="visual"></h2>
 			    	<!-- The div where our band image will be shown. -->
-			    	<div id="band-div"><img src="images/hangman-boardgame.jpg" alt="Midieval Hangman"></div>
+			    	<div id="image-div"><img class="img-fluid" src="images/hangman-boardgame.jpg" alt="Midieval Hangman"></div>
 			    </div>
-			    <div class="col">
+			    <div class="col col-md-6">
 			    	<div id="game-section">
-			    		<h2 class="">Press any key to get started.</h2>
+			    		<p class="">Press any key to get started.</p>
 			    		<div>
-				    		<h3 class="section-title">Wins</h3>
+				    		<h3 class="section-title">Wins:</h3>
 				    		<!-- The div where our wins will be shown. -->
 				    		<div id="wins"></div>
 				    	</div>
-				    	<div>
+				    	<div id="current-word-section">
 				    		<h3 class="section-title">Current word:</h3>
 				    		<!-- The div where our current word (and guessing progress) will be shown. -->
 			    			<div id="current-word"></div>
 				    	</div>
-			    		//Separation between Intro and Logistics
-				      	<div >
+			
+				      	<div id="guesses-remaining-section">
 				      		<h3 class="section-title">Number of Guesses Remaining:</h3>
+				      		<!-- current word and guessing progress shown here -->
 				      		<div id="guesses-remaining"></div>
 				      	</div>
 				      	<div id="guessed-letters-section">
 				      		<h3 class="section-title">Letters Already Guessed:</h3>
+				      		<!-- Guessed letters shown here -->
 				      		<div id="guessed-letters"></div>
 				      	</div>
 				    </div>
@@ -67,9 +67,10 @@
 				</footer>
 				<!-- Footer -->
 
+			<!-- Linking to the JavaScript file. -->
+			<script type="text/javascript" src="scripts/index.js"></script>
 			<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 			<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
-			<script type="text/javascript" src="scripts/index.js"></script>
 		</body>
 	</html>
