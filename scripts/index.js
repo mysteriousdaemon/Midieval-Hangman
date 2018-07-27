@@ -1,31 +1,30 @@
-
-alert("is the javaScript file attatched?");
-
 //Giant hangman object, houses logic and variables.
-var hangmanGame = {
+//Literal object notation
+var hangmanGame = { 
+//objects within objects
 	wordsToPick: {
 		bellytimber: {
-			//word: "bellytimber",
+			word: "bellytimber",
 			picture: "food.jpg",
 			definition: "Food."
 		},
 		earthapple: {
-			//word: "earthapple",
+			word: "earthapple",
 			picture: "potato.jpg",
-			definition: "A cucumber or potato" 
+			definition: "A cucumber or potato." 
 		},
 		fellowfeel: {
-			//word: "fellowfeel",
+			word: "fellowfeel",
 			picture: "fellowfeel.jpg",
-			defition: "To share another's feelings, to sympathize with."
+			definition: "To share another's feelings, to sympathize with."
 		},
 		hoddypeak: {
-			//word: "hoddypeak"
+			word: "hoddypeak",
 			picture: "jester.jpg",
 			definition: "A simpleton, blockhead."
 		},
 		gundygut: {
-			//word: "gundygut",
+			word: "gundygut",
 			picture: "glutton.jpg",
 			definition: "A glutton."
 		},
@@ -62,7 +61,7 @@ var hangmanGame = {
 		recooper: {
 			word: "recooper",
 			picture: "recooper.jpg",
-			definition: "Recooperate"
+			definition: "Recooperate."
 		},
 		smellsmock: {
 			word: "smellsmock",
@@ -86,6 +85,7 @@ var hangmanGame = {
 	letterGuessed: null,
 	wins: 0,
 
+	//hangmanGame method used to start the game and harvest user input
 	setupGame: function() {
 		// Here we pick a random word.
 		var objKeys = Object.keys(this.wordsToPick);
@@ -99,7 +99,7 @@ var hangmanGame = {
 	    this.processUpdateTotalGuesses(); 
 	},
 
-	//function runs whenever the user guesses a letter:
+	//method runs whenever the user guesses a letter:
 	updatePage: function(letter) {
 		if (this.guessesLeft === 0) {
 			this.restartGame();
@@ -200,8 +200,8 @@ var hangmanGame = {
 		//If you haven't correctly guessed a letter in the word yet, we set win to false.
 		if (this.matchedLetters.length === 0) {
 			win = false;
-		}
 		//otherwise set win to true.
+		}
 		else {
 			win = true;
 		}
@@ -220,11 +220,11 @@ var hangmanGame = {
 			//update the wins on the page.
 			document.querySelector("#wins").innerHTML = this.wins;
 			//!!!!!!! Update the word (song title) and definition (band) on the page.
-			document.querySelector("#visual").innerHTML = this.wordsToPick[this.wordInPlay].word + "def: " + this.wordInPlay;
+			document.querySelector("#visual").innerHTML = this.wordsToPick[this.wordInPlay].word + " <em>Def:</em> " + this.wordsToPick[this.wordInPlay].definition;
 
 			//update the image of the word on the page.
 			document.querySelector("#image-div").innerHTML = 
-				"<img class='word-image' src='images/" +
+				"<img class='word-image img-fluid' src='images/" +
 				this.wordsToPick[this.wordInPlay].picture + "' alt='" + 
 				this.wordsToPick[this.wordInPlay].word + "'>";
 
@@ -246,8 +246,6 @@ document.onkeyup = function(event) {
 	hangmanGame.updatePage(hangmanGame.letterGuessed);
 };
 
-alert("is the javaScript file attatched?");
-
 //end of game
 
 /*	
@@ -267,8 +265,4 @@ alert("is the javaScript file attatched?");
 var term =  {
 	words: ["bellytimber", "earthapple", "fellowfeel", ""];
 }
-
-
-	
-
-}
+*/
