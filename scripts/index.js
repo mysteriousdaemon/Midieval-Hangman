@@ -99,6 +99,11 @@ var hangmanGame = {
 	    this.processUpdateTotalGuesses(); 
 	},
 
+	//hides "press any key..." after initiation
+	hideIntro: function() {
+			document.querySelector('#intro').innerHTML = "";
+	},
+
 	//method runs whenever the user guesses a letter:
 	updatePage: function(letter) {
 		if (this.guessesLeft === 0) {
@@ -244,6 +249,8 @@ document.onkeyup = function(event) {
 	hangmanGame.letterGuessed = String.fromCharCode(event.keyCode).toLowerCase();
 	//Pass the guessed letter into our updatePage function to run the game logic.
 	hangmanGame.updatePage(hangmanGame.letterGuessed);
+
+	hangmanGame.hideIntro();
 };
 
 //end of game
